@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="style.css"/>
+		<title>Editeur de contenue web</title>
+  </head>
+	<body>
+		<form method="post">
+				<input type='button' value='↩' onclick="editextcommande('undo');"/>
+				<input type='button' value='↪' onclick="editextcommande('redo');"/>
+				<input type='button' value='hr' onclick="editextcommande('insertHorizontalRule');"/>
+				<input type='button' value='B' style="font-weight:bold;" onclick="editextcommande('bold');"/>
+				<input type='button' value='I' style="font-style:italic;" onclick="editextcommande('italic');"/>
+				<input type='button' value='U' style="text-decoration:underline;" onclick="editextcommande('underline');"/>
+				<input type='button' value='S' style="text-decoration:line-through;" onclick="editextcommande('strikeThrough');"/>
+				<select onclick="editextcommande('heading', this.value);"" size='1'>
+					<option value="p">Par default
+					<option value="h1">Titre 1
+					<option value="h2">Titre 2
+					<option value="h3">Titre 3
+				 </select>
+				<input type='button' value='Aligner à gauche' onclick="editextcommande('justifyLeft');"/>
+				<input type='button' value='Centrer' onclick="editextcommande('justifyCenter');"/>
+				<input type='button' value='Aligner à droite' onclick="editextcommande('justifyRight');"/>
+				<input type='button' value='•' onclick="editextcommande('insertUnorderedList');"/>
+				<input type='button' value='x.' onclick="editextcommande('insertOrderedList');"/>
+				<input type='button' value='x²' onclick="editextcommande('superscript');"/>
+				<input type="button" value="Lien" onclick="editextcommande('createLink');" />
+		</form>
+		<br/>
+		<div class="editor" contenteditable="true"></div>
+		<script src="script.js" ></script>
+	</body>
+</html>
