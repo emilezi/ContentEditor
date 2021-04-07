@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<!--  Génère les informations générales de la page et lui inclut le fichier CSS avec les fonctions style de la page -->
 		<meta charset="utf-8"/>
 		<link rel="stylesheet" href="style.css"/>
 		<title>Editeur de contenue web</title>
   </head>
 	<body>
+		<!--  Génère le formulaire editable avec les boutons d'édition de contenue  -->
 		<form method="post">
 				<input type='button' value='↩' onclick="editextcommande('undo');"/>
 				<input type='button' value='↪' onclick="editextcommande('redo');"/>
@@ -29,7 +31,9 @@
 				<input type="button" value="Lien" onclick="editextcommande('createLink');" />
 		</form>
 		<br/>
+		<!--  Génère la zone de texte editable  -->
 		<div class="editor" contenteditable="true"></div>
+		<!--  Récupère le script d'edition de texte du fichier script.js -->
 		<script src="script.js" ></script>
 	</body>
 </html>
